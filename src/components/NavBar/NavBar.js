@@ -1,4 +1,5 @@
-import './NavBar.scss'
+import { CartWidget } from '../CartWidget/CartWidget'
+import '../NavBar.scss'
 
 export const NavBar = () => {
 
@@ -10,11 +11,13 @@ export const NavBar = () => {
 
         <nav>
             <ul>
-                <li>Nosotros</li>
-                <li>Productos</li>
-                <li>Contacto</li>
+                <li>NOSOTROS</li>
+                <li>PRODUCTOS</li>
+                <li>CONTACTO</li>
             </ul>
         </nav>
+
+        <CartWidget/>
 
     </header>
     )

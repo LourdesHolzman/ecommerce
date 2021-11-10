@@ -5,4 +5,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+
+
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+
+            li {
+                font-weight: 500;
+                padding: 16px;
+                list-style: none;
+            }
+        } 
     }
+}

@@ -23,9 +23,8 @@ export const Itemcount = ({stock}) => {
     }
 
     const respuesta = () => (
-        alert("Agregaste ${counter} productos a tu carrito")
+        alert(`Agregaste ${counter} productos a tu carrito`)
         )
-
 
     return (
         <>

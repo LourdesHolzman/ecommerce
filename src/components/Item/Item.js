@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { stock } from '../data/stock'
+import { Itemcount } from '../Itemcount/Itemcount'
 
 export const Item = ({id, name, img, desc, price, category}) => {
 
@@ -11,7 +12,7 @@ export const Item = ({id, name, img, desc, price, category}) => {
                 <p className="card-text">Precio: ${price}</p>
                 <p className="card-text">{desc}</p>
                 <p className="card-text">{category}</p>
-                <Link to={`/detail/${id}`} className="btn btn-primary">Ver más</Link>
+                <Itemcount stock= {stock}/>
             </div>
         </article>
     )

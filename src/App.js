@@ -1,32 +1,27 @@
 import React from 'react';
 import  { NavBar }  from './components/NavBar/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { BrowserRouter, Route , Routes } from 'react-router-dom';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import { CartView } from './components/CartView/CartView';
-
-
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './router/AppRouter';
+import { CartProvider } from './context/CartContext';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 function App() {
 
+
   return (
-   
-    <BrowserRouter>
 
-      <NavBar/>
+    <DarkModeProvider>
+      <CartProvider>
 
-      <Routes>
-        <Route path="/nosotros" element={ <ItemListContainer greeting='Cosmética natural'/> } />
-        <Route path="/productos" element={ <ItemDetailContainer/> } />
-        <Route path="/detail" element={ <ItemDetailContainer/> } />
-        <Route path="/cart" element={ <CartView/> } />
+        <BrowserRouter>
+            <NavBar/>
+            <AppRouter/>   
+        </BrowserRouter>
+        
+      </CartProvider>
+    </DarkModeProvider>
 
-      </Routes>
-      
-
-    </BrowserRouter>
-    
   );
 }
 

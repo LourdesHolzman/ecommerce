@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
-import { ItemCount } from '../ItemCount/ItemCount'
+import { Itemcount } from '../Itemcount/Itemcount'
 
 export const ItemDetail = ({id, name, img, desc, price, category, stock}) => {
 
@@ -42,7 +42,7 @@ export const ItemDetail = ({id, name, img, desc, price, category, stock}) => {
 
             {
                 !isInCart(id)
-                    ?   <ItemCount 
+                    ?   <Itemcount 
                             max={stock} 
                             cantidad={cantidad} 
                             setCantidad={setCantidad}

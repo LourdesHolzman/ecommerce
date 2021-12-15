@@ -1,44 +1,39 @@
-import React, { useState } from 'react'
-import {Button} from "react-bootstrap"
+import React from 'react'
+import { btnConfig } from './btnConfig'
+import { BsFillCartPlusFill } from "react-icons/bs";
+import { BsFillCartDashFill } from "react-icons/bs";
 
+export const Itemcount = ( {max, setCantidad, cantidad, onAdd} ) => {
 
-export const Itemcount = ({stock}) => {
-
-    const [counter, setCounter] = useState(1);
-
-    const sumar = () => {
-        if(stock > counter) {
-            setCounter(counter +1)
-        } else (
-            alert ("Sin stock")
-        )
-    }
-    
-    
-    const restar = () => {
-        if(counter > 1) {
-            setCounter(counter -1);
-        }
-        
+    const handleRestar = () => {
+        cantidad > 0 && setCantidad(cantidad - 1)
     }
 
-    const respuesta = () => (
-        alert(`Agregaste ${counter} productos a tu carrito`)
-        )
+    const handleSumar = () => {
+        cantidad < max && setCantidad(cantidad + 1)
+    }
+
+    const config = btnConfig(cantidad, max, handleSumar, handleRestar)
 
     return (
-        <>
-            <h2>{counter}</h2>
+        <div className="my-3">
+            <button {...config.restar}>
+                <BsFillCartDashFill/>
+            </button>
 
-            <div>
-                <Button variant="primary" onClick={restar}> - </Button>
-                <Button variant="primary" onClick={sumar}> + </Button>
-            </div>
+            <span className="mx-2">{cantidad}</span>
 
-            
-
-            <Button variant="primary" size="lg" onClick={respuesta} > Agregar al carrito </Button>
-            
-        </>
+            <button {...config.sumar}>
+                <BsFillCartPlusFill/>
+            </button>
+            <br/>
+            <button 
+                className="btn btn-success my-2" 
+                onClick={onAdd}
+                disabled={cantidad === 0}
+            >
+                Agregar al carrito
+            </button>
+        </div>
     )
 }

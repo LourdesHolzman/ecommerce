@@ -67,3 +67,51 @@ export const ItemListContainer = () => {
         </>
     )
 }
+/*
+import React,{ useEffect, useState, UseState} from "react"
+import { useParams } from 'react-router'
+import { ItemList } from '../ItemList/ItemList'
+import { Loader } from '../Loader/Loader'
+import { collection, getDocs} from 'firebase/firestore/lite'
+import { db } from "../../firebase/config"
+
+export const ItemListContainer = () => {
+
+    const [loading, setLoading] = useState(false)
+    const [productos, setProductos] = useState([])
+
+    const { catId } = useParams()
+
+    useEffect(() => {
+        setLoading(true)
+
+        const productosRef = collection (db, 'productos')
+
+        getDocs(productosRef)
+        .then((collection) => {
+            const items = collection.docs.map((doc)=> ({
+                id: doc.id,
+                ...doc.data()
+            }))
+            console.log(items)
+
+            setProductos(items)
+        })
+        .finally(() => {
+            setLoading(false)
+        })
+    
+    }, [catId])
+
+return (
+    <>
+    <Container className="text-muted my-5">
+        <h3> {greeting} </h3>
+    </Container>
+    <ItemList items={productos}/>
+    </>
+
+)
+}
+*/
+

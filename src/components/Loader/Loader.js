@@ -8,8 +8,7 @@ export const Loader = () => {
         <div className="loader">
             <Spinner 
                 animation="border" 
-                size="lg" 
-                variant="primary"
+                variant="secondary"
             />
         </div>
     )

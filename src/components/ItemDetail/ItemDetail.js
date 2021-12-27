@@ -18,10 +18,6 @@ export const ItemDetail = ({id, name, img, desc, price, category, stock}) => {
         navigate(-1)
     }
 
-    const handleVolverInicio = () => {
-        navigate('/')
-    }
-
     const handleAgregar = () => {
         if (cantidad > 0) {
             agregarAlCarrito({
@@ -52,8 +48,7 @@ export const ItemDetail = ({id, name, img, desc, price, category, stock}) => {
                     :   <Link to="/cart" className="btn btn-success d-block">Finalizar compra</Link>
             }
 
-            <button className="btn btn-primary" onClick={handleVolver}>Volver</button>
-            <button className="btn btn-outline-primary" onClick={handleVolverInicio}>Volver al inicio</button>
+            <button className="btn btn-secondary" onClick={handleVolver}>volver</button>
         </div>
     )
 }

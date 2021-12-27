@@ -8,7 +8,7 @@ export const NavBar = () => {
     return (
     
     <header className='header'>
-        <h1>Erde Frisch</h1>
+        <img src='https://i.ibb.co/Mh6N0c3/gg.png' style={{width:'191.7px', height:'56.4px', margin:'30px'}} />
 
         <nav>
             <ul>

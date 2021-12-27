@@ -79,7 +79,7 @@ export const Checkout = () => {
                                     />
                                     {formik.errors.email && <small>{formik.errors.email}</small>}
 
-                                    <button type="submit" className="btn btn-primary">Enviar</button>
+                                    <button type="submit" className="btn btn-success">Enviar</button>
                                 </form>
                             )}
                         </Formik>

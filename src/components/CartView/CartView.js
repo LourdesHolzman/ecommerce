@@ -11,7 +11,7 @@ export const CartView = () => {
     if (carrito.length === 0) {
         return (
             <div className="container my-5">
-                <h2>No agregaste items al carrito aún</h2>
+                <h2>No agregaste ningún producto al carrito aún</h2>
                 <hr/>
                 <Link to="/" className="btn btn-primary">Volver</Link>
             </div>
@@ -20,7 +20,6 @@ export const CartView = () => {
 
     return (
         <div className="container my-5">
-            <h2>Cart View</h2>
             <hr/>
             <section>
                 {

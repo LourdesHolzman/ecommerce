@@ -2,11 +2,14 @@
     visibility: visible;
     opacity: 1;
     transition: all .5s ease-in-out;
+    span{color: rgb(119, 182, 161);}
 }
 
 .cartWidget {
     font-size: 25px;
+    color: rgb(119, 182, 161);
 }
+
 
 .hidden {
     visibility: hidden;
@@ -16,5 +19,5 @@
 
 :link {
     text-decoration: none;
-    
+       
 }

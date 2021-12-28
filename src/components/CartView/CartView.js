@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { CartItem } from './CartItem'
+import './CartView.scss'
 
 export const CartView = () => {
 
@@ -11,9 +12,9 @@ export const CartView = () => {
     if (carrito.length === 0) {
         return (
             <div className="container my-5">
-                <h2>No agregaste ningún producto al carrito aún</h2>
+                <h2>Ups! Sin productos en el carrito</h2>
                 <hr/>
-                <Link to="/" className="btn btn-primary">Volver</Link>
+                <Link to="/" className="btn btn-secondary">Volver</Link>
             </div>
         )
     }

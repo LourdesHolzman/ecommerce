@@ -15,6 +15,7 @@ export const NavBar = () => {
                 <li><Link to="productos/ANTI-AGE">ANTI-AGE</Link></li>
                 <li><Link to="productos/ACTIVOS CONCENTRADOS y SERUM">ACTIVOS CONCENTRADOS y SERUM</Link></li>
                 <li><Link to="productos/LÍNEA TERAPÉUTICA">LÍNEA TERAPÉUTICA</Link></li>  
+                <li><Link to="productos/LÍNEA SOLAR">LÍNEA SOLAR</Link></li>
             </ul>
         </nav>
 
